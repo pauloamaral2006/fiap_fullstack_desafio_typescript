@@ -10,11 +10,11 @@ O sistema deve permitir que uma aplicação **Front-end** consuma os dados e rea
 
 ## 🚀 Tecnologias Utilizadas
 
-- **TypeScript (6.0.2)**
-- **Node.js (22.11.0)**
-- **Express (5.2.1)**
-- **TypeORM (0.3.6)**
-- **SQLite (6.0.1)**
+- **TypeScript**
+- **Node.js**
+- **Express**
+- **TypeORM**
+- **SQLite**
 
 ---
 
