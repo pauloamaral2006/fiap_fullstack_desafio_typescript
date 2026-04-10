@@ -99,8 +99,9 @@ class LivroService {
             const existentesSet = new Set(existentes.map((l) => l.isbn));
             const novos = livros.filter((l) => !existentesSet.has(l.isbn));
             if (novos.length === 0) {
-                return []; // ✅ sempre retorna array
+                return []; //
             }
+            console.log("Livros a serem inseridos:", novos);
             const entities = LivroRepository.create(novos);
             return await LivroRepository.save(entities);
         }

@@ -2,7 +2,7 @@ import {
   Column,
   Entity,
   JoinColumn,
-  OneToOne,
+  ManyToOne,
   PrimaryGeneratedColumn,
   Unique,
 } from "typeorm";
@@ -22,8 +22,8 @@ export default class LivroEntity {
   isbn: string;
   @Column()
   ano_publicacao: number;
-  @OneToOne(() => EditoraEntity, { eager: true })
-  @JoinColumn()
+  @ManyToOne(() => EditoraEntity, { eager: true })
+  @JoinColumn({ name: "editora" })
   editora: EditoraEntity;
 
   constructor(

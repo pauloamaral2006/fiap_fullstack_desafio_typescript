@@ -50,8 +50,8 @@ __decorate([
     __metadata("design:type", Number)
 ], LivroEntity.prototype, "ano_publicacao", void 0);
 __decorate([
-    (0, typeorm_1.OneToOne)(() => editoraEntity_1.default, { eager: true }),
-    (0, typeorm_1.JoinColumn)(),
+    (0, typeorm_1.ManyToOne)(() => editoraEntity_1.default, { eager: true }),
+    (0, typeorm_1.JoinColumn)({ name: "editora" }),
     __metadata("design:type", editoraEntity_1.default)
 ], LivroEntity.prototype, "editora", void 0);
 LivroEntity = __decorate([
