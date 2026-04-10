@@ -10,22 +10,22 @@ O sistema deve permitir que uma aplicação **Front-end** consuma os dados e rea
 
 ## 🚀 Tecnologias Utilizadas
 
-* **TypeScript (6.0.2)**
-* **Node.js (22.11.0)**
-* **Express (5.2.1)**
-* **TypeORM (0.3.6)**
-* **SQLite (6.0.1)**
+- **TypeScript (6.0.2)**
+- **Node.js (22.11.0)**
+- **Express (5.2.1)**
+- **TypeORM (0.3.6)**
+- **SQLite (6.0.1)**
 
 ---
 
 ## 📌 Requisitos Técnicos
 
-* Implementação utilizando a versão mais recente do TypeScript
-* Estrutura organizada em camadas (Controller, Service, Entity)
-* Integração com banco de dados
-* API RESTful
-* Tratamento de erros
-* Código limpo e boas práticas
+- Implementação utilizando a versão mais recente do TypeScript
+- Estrutura organizada em camadas (Controller, Service, Entity)
+- Integração com banco de dados
+- API RESTful
+- Tratamento de erros
+- Código limpo e boas práticas
 
 ---
 
@@ -35,11 +35,11 @@ O sistema deve permitir que uma aplicação **Front-end** consuma os dados e rea
 
 A API deve permitir:
 
-* ✅ Criar um livro
-* ✅ Listar todos os livros
-* ✅ Buscar livro por ID
-* ✅ Atualizar informações de um livro
-* ✅ Deletar um livro
+- ✅ Criar um livro
+- ✅ Listar todos os livros
+- ✅ Buscar livro por ID
+- ✅ Atualizar informações de um livro
+- ✅ Deletar um livro
 
 ---
 
@@ -63,18 +63,19 @@ A API deve permitir:
 
 ## 🔌 Endpoints da API
 
-| Método | Endpoint     | Descrição               |
-| ------ | ------------ | ----------------------- |
-| GET    | /editora     | Listar todos os editora |
-| GET    | /editora/:id | Buscar por ID           |
-| POST   | /editora     | Criar nova editora      |
-| PUT    | /editora/:id | Atualizar editora       |
-| DELETE | /editora/:id | Remover editora         |
-| GET    | /livros      | Listar todos os livros  |
-| GET    | /livros/:id  | Buscar por ID           |
-| POST   | /livros      | Criar novo livro        |
-| PUT    | /livros/:id  | Atualizar livro         |
-| DELETE | /livros/:id  | Remover livro           |
+| Método | Endpoint         | Descrição               |
+| ------ | ---------------- | ----------------------- |
+| GET    | /editora         | Listar todos os editora |
+| GET    | /editora/:id     | Buscar por ID           |
+| POST   | /editora         | Criar nova editora      |
+| PUT    | /editora/:id     | Atualizar editora       |
+| DELETE | /editora/:id     | Remover editora         |
+| GET    | /livros          | Listar todos os livros  |
+| GET    | /livros/:id      | Buscar por ID           |
+| POST   | /livros          | Criar novo livro        |
+| PUT    | /livros/:id      | Atualizar livro         |
+| DELETE | /livros/:id      | Remover livro           |
+| POST   | /livros/carregar | Carrega base de livros  |
 
 ---
 
@@ -108,13 +109,12 @@ npm start
 
 ## 🧠 Boas Práticas Aplicadas
 
-* Separação de responsabilidades (Controller / Service / Entity)
-* Tratamento de erros customizados
-* Evitar duplicidade de dados (ex: ISBN único)
-* Código tipado com TypeScript
+- Separação de responsabilidades (Controller / Service / Entity)
+- Tratamento de erros customizados
+- Evitar duplicidade de dados (ex: ISBN único)
+- Código tipado com TypeScript
 
 ---
-
 
 ## 👨‍💻 Autor
 
