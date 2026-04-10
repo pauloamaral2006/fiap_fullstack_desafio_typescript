@@ -48,7 +48,7 @@ export default class LivroService {
 
   static async findById(id: number): Promise<LivroEntity> {
     const livro = await LivroRepository.findOne({ where: { id } });
-    console.log("Livro encontrado:", livro);
+    
     if (!livro) {
       throw new NaoEncontrado("Livro não encontrado");
     }
@@ -130,11 +130,9 @@ export default class LivroService {
       if (novos.length === 0) {
         return []; //
       }
-      console.log("Livros a serem inseridos:", novos);
       const entities = LivroRepository.create(novos);
       return await LivroRepository.save(entities);
     } catch (error) {
-      console.error("Erro ao carregar livros:", error);
       throw error;
     }
   }

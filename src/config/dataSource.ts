@@ -5,7 +5,7 @@ import EditoraEntity from "../entity/editoraEntity";
 import LivroEntity from "../entity/livroEntity";
 
 const AppDataSource = new DataSource({
-  type: "sqlite",
+  type: "better-sqlite3",
   database: process.env.DB_CONNECTION_STRING || "./src/config/database.sqlite",
   entities: [EditoraEntity, LivroEntity],
   synchronize: true,

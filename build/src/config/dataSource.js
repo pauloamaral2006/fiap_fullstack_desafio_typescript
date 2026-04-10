@@ -8,7 +8,7 @@ const typeorm_1 = require("typeorm");
 const editoraEntity_1 = __importDefault(require("../entity/editoraEntity"));
 const livroEntity_1 = __importDefault(require("../entity/livroEntity"));
 const AppDataSource = new typeorm_1.DataSource({
-    type: "sqlite",
+    type: "better-sqlite3",
     database: process.env.DB_CONNECTION_STRING || "./src/config/database.sqlite",
     entities: [editoraEntity_1.default, livroEntity_1.default],
     synchronize: true,
