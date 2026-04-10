@@ -1,0 +1,92 @@
+[
+  {
+    "titulo": "Harry Potter e a Pedra Filosofal",
+    "autor": "J.K. Rowling",
+    "isbn": "9788532511010",
+    "ano_publicacao": 1997,
+    "editora": {
+      "nome": "Rocco"
+    }
+  },
+  {
+    "titulo": "Harry Potter e a Câmara Secreta",
+    "autor": "J.K. Rowling",
+    "isbn": "9788532511669",
+    "ano_publicacao": 1998,
+    "editora": {
+      "nome": "Rocco"
+    }
+  },
+  {
+    "titulo": "Harry Potter e o Prisioneiro de Azkaban",
+    "autor": "J.K. Rowling",
+    "isbn": "9788532512062",
+    "ano_publicacao": 1999,
+    "editora": {
+      "nome": "Rocco"
+    }
+  },
+  {
+    "titulo": "Harry Potter e o Cálice de Fogo",
+    "autor": "J.K. Rowling",
+    "isbn": "9788532512529",
+    "ano_publicacao": 2000,
+    "editora": {
+      "nome": "Rocco"
+    }
+  },
+  {
+    "titulo": "Harry Potter e a Ordem da Fênix",
+    "autor": "J.K. Rowling",
+    "isbn": "9788532516220",
+    "ano_publicacao": 2003,
+    "editora": {
+      "nome": "Rocco"
+    }
+  },
+  {
+    "titulo": "Harry Potter e o Enigma do Príncipe",
+    "autor": "J.K. Rowling",
+    "isbn": "9788532519474",
+    "ano_publicacao": 2005,
+    "editora": {
+      "nome": "Rocco"
+    }
+  },
+  {
+    "titulo": "Harry Potter e as Relíquias da Morte",
+    "autor": "J.K. Rowling",
+    "isbn": "9788532520661",
+    "ano_publicacao": 2007,
+    "editora": {
+      "nome": "Rocco"
+    }
+  },
+  {
+    "titulo": "A Sociedade do Anel",
+    "autor": "J.R.R. Tolkien",
+    "isbn": "9788533613379",
+    "ano_publicacao": 1954,
+    "editora": {
+      "nome": "Martins Fontes"
+    }
+  },
+  {
+    "titulo": "As Duas Torres",
+    "autor": "J.R.R. Tolkien",
+    "isbn": "9788533613386",
+    "ano_publicacao": 1954,
+    "editora": {
+      "nome": "Martins Fontes"
+    }
+  },
+  {
+    "titulo": "O Retorno do Rei",
+    "autor": "J.R.R. Tolkien",
+    "isbn": "9788533613393",
+    "ano_publicacao": 1955,
+    "editora": {
+      "nome": "Martins Fontes"
+    }
+  }
+]
