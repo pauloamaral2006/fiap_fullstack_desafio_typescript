@@ -6,7 +6,7 @@ import trataErros from "../erros/tratarErro";
 
 export default class LivroController {
   static async findAll(req: Request, res: Response) {
-    const { autor, titulo, editoraId } = req.query;
+    const { autor, titulo, editoraId, editoraNome } = req.query;
 
     const parsedEditoraId = Number(editoraId);
 
@@ -14,6 +14,7 @@ export default class LivroController {
       autor: typeof autor === "string" ? autor : undefined,
       titulo: typeof titulo === "string" ? titulo : undefined,
       editoraId: !isNaN(parsedEditoraId) ? parsedEditoraId : undefined,
+      editoraNome: typeof editoraNome === "string" ? editoraNome : undefined,
     });
 
     return res.json(lista);

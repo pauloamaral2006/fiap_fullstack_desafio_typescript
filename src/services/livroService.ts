@@ -13,15 +13,15 @@ const LivroRepository = AppDataSource.getRepository(LivroEntity);
 
 export default class LivroService {
   private static async checkDuplicidade(
-    titulo: string,
+    isbn: string,
     id: number = 0,
   ): Promise<void> {
     const existente = await LivroRepository.findOneBy({
-      titulo: titulo,
+      isbn: isbn,
     });
 
     if (existente && (id == 0 || existente.id !== id)) {
-      throw new RegraNegocio("Livro já cadastrado");
+      throw new RegraNegocio("ISBN já cadastrado");
     }
   }
 
@@ -59,7 +59,7 @@ export default class LivroService {
     const filteredData = filterFields(LivroEntity, data);
 
     await EditoraService.findById(filteredData.editora);
-    await this.checkDuplicidade(filteredData.titulo);
+    await this.checkDuplicidade(filteredData.isbn);
 
     const livro = await LivroRepository.save(filteredData);
     return livro;
@@ -70,7 +70,7 @@ export default class LivroService {
 
     const filteredData = filterFields(LivroEntity, data, ["id"]);
     livro = { ...livro, ...filteredData };
-    await this.checkDuplicidade(livro.titulo, id);
+    await this.checkDuplicidade(livro.isbn, id);
 
     await LivroRepository.update({ id }, filteredData);
   }

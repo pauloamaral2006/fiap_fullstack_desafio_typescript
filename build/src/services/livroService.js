@@ -14,12 +14,12 @@ const typeorm_1 = require("typeorm");
 const editoraEntity_1 = __importDefault(require("../entity/editoraEntity"));
 const LivroRepository = dataSource_1.default.getRepository(livroEntity_1.default);
 class LivroService {
-    static async checkDuplicidade(titulo, id = 0) {
+    static async checkDuplicidade(isbn, id = 0) {
         const existente = await LivroRepository.findOneBy({
-            titulo: titulo,
+            isbn: isbn,
         });
         if (existente && (id == 0 || existente.id !== id)) {
-            throw new tratarErro_1.RegraNegocio("Livro já cadastrado");
+            throw new tratarErro_1.RegraNegocio("ISBN já cadastrado");
         }
     }
     static async findAll(filters) {
@@ -48,7 +48,7 @@ class LivroService {
     static async create(data) {
         const filteredData = (0, filterFields_1.default)(livroEntity_1.default, data);
         await editoraService_1.default.findById(filteredData.editora);
-        await this.checkDuplicidade(filteredData.titulo);
+        await this.checkDuplicidade(filteredData.isbn);
         const livro = await LivroRepository.save(filteredData);
         return livro;
     }
@@ -56,7 +56,7 @@ class LivroService {
         let livro = await this.findById(id);
         const filteredData = (0, filterFields_1.default)(livroEntity_1.default, data, ["id"]);
         livro = { ...livro, ...filteredData };
-        await this.checkDuplicidade(livro.titulo, id);
+        await this.checkDuplicidade(livro.isbn, id);
         await LivroRepository.update({ id }, filteredData);
     }
     static async delete(id) {

@@ -8,12 +8,13 @@ const livroService_1 = __importDefault(require("../services/livroService"));
 const tratarErro_1 = __importDefault(require("../erros/tratarErro"));
 class LivroController {
     static async findAll(req, res) {
-        const { autor, titulo, editoraId } = req.query;
+        const { autor, titulo, editoraId, editoraNome } = req.query;
         const parsedEditoraId = Number(editoraId);
         const lista = await livroService_1.default.findAll({
             autor: typeof autor === "string" ? autor : undefined,
             titulo: typeof titulo === "string" ? titulo : undefined,
             editoraId: !isNaN(parsedEditoraId) ? parsedEditoraId : undefined,
+            editoraNome: typeof editoraNome === "string" ? editoraNome : undefined,
         });
         return res.json(lista);
     }
