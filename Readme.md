@@ -107,6 +107,30 @@ npm start
 
 ---
 
+## ⚙️ Configurações Opcionais
+
+Por padrão, a aplicação:
+
+- 🚀 Roda na porta **3000**
+- 🗄️ Utiliza um banco SQLite localizado em: `./src/config/database.sqlite`
+
+Caso deseje alterar essas configurações, siga os passos abaixo:
+
+1. Faça uma cópia do arquivo `.env.example`
+2. Renomeie para `.env`
+3. Ajuste os parâmetros conforme necessário
+
+### 📄 Exemplo
+
+```env
+PORT=3000
+DB_CONNECTION_STRING=./src/config/database.sqlite
+```
+
+> ⚠️ Certifique-se de que o arquivo `.env` esteja na raiz do projeto.
+
+---
+
 ## 🧠 Boas Práticas Aplicadas
 
 - Separação de responsabilidades (Controller / Service / Entity)

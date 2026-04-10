@@ -1,4 +1,12 @@
-build
-node_modules
+# dependências
+node_modules/
+
+# build
+build/
+dist/
+
+# ambiente
 .env
+
+# lock (opcional ignorar)
 package-lock.json
